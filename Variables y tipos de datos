@@ -1,0 +1,17 @@
+//Variables y tipos de datos 
+fun DeterminarTipoDato(input: Any)
+ {
+    when (input)
+ {
+        is Int -> println ("El dato es un número entero.")
+        is Double -> println  ("El dato es un número decimal")
+        is Boolean -> println ("El dato es un tipo de dato booleano")
+        is String -> println ("El dato es una cadena de texto”)
+        else -> println ("El dato es un tipo de dato desconocido")
+    }
+}
+fun main() 
+{
+    val Input: Any = 10.89
+    DeterminarTipoDato (Input)
+}
