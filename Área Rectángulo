@@ -1,0 +1,32 @@
+//área de rectangulo 
+fun main() {
+    //Area del rectángulo
+    val largo = 10.0
+    val ancho = 4.0
+    val altura = 6.0
+    
+    val areaRectangulo = calcularArea(largo, ancho)
+    println("El área del rectángulo es: $areaRectangulo")
+
+    val volumen = calcularVolumen(areaRectangulo, altura)
+    if (volumen >= 0)
+{
+        println("El volumen del prisma rectangular es: $volumen")
+    } else
+{
+        println("La altura debe ser un valor no negativo para calcular el volumen.")
+    }
+}
+
+// Calcular el área 
+fun calcularArea(largo: Double, ancho: Double): Double {
+    return largo * ancho
+}
+
+// Calcular el volumen del prisma
+fun calcularVolumen(areaRectangulo: Double, altura: Double): Double {
+    if (altura >= 0) {
+        return areaRectangulo * altura
+    } else {
+        return -1.0 // Valor negativo para indicar un error en el cálculo
+    } }
